@@ -70,11 +70,7 @@
       const isGithubPages = host.endsWith('github.io');
       const segments = window.location.pathname.split('/').filter(Boolean);
       const basePath = isGithubPages && segments.length > 0 ? '/' + segments[0] + '/' : '/';
-      const target = basePath + '?from404=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash);
       document.getElementById('homeLink').setAttribute('href', basePath);
-      setTimeout(function () {
-        window.location.replace(target);
-      }, 900);
     })();
   </script>
 </body>

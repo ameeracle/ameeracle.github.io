@@ -29,18 +29,8 @@
 </head>
 <body>
   <script>
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const from404 = params.get('from404');
-      if (from404) {
-        window.history.replaceState(null, '', from404);
-        return;
-      }
-
-      if (window.location.hash && window.location.hash.startsWith('#/')) {
-        window.history.replaceState(null, '', window.location.hash.substring(1));
-      }
-    })();
+    window.flutterConfiguration = window.flutterConfiguration || {};
+    window.flutterConfiguration.renderer = "html";
   </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
