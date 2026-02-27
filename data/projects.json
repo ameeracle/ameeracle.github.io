@@ -1,0 +1,107 @@
+﻿[
+  {
+    "titleEn": "OHiO Integrated System",
+    "titleAr": "نظام OHiO الشامل",
+    "descriptionEn": "A complete business system that unifies operations in one platform with clear workflows, role-based access, and centralized data handling.",
+    "descriptionAr": "نظام أعمال متكامل يجمع العمليات في منصة واحدة مع مسارات عمل واضحة، وصلاحيات حسب الدور، وإدارة مركزية للبيانات.",
+    "imageUrls": [
+      "images/projects/ohio-1.png",
+      "images/projects/ohio-2.png",
+      "images/projects/ohio-3.png"
+    ],
+    "link": "/ohio/",
+    "techStack": ["Flutter Web", "ASP.NET Core", "PostgreSQL", "RBAC"],
+    "kind": "system",
+    "color": "#71D4FF"
+  },
+  {
+    "titleEn": "LogicLock",
+    "titleAr": "لعبة Logiclock",
+    "descriptionEn": "A puzzle game where the player uses hints step by step to reach the secret number through logical deduction.",
+    "descriptionAr": "لعبة ألغاز يعتمد فيها اللاعب على التلميحات خطوة بخطوة للوصول إلى الرقم السري بالتحليل المنطقي.",
+    "imageUrls": [
+      "images/projects/logiclock-1.png",
+      "images/projects/logiclock-2.png",
+      "images/projects/logiclock-3.png"
+    ],
+    "link": "/logiclock/",
+    "techStack": ["Flutter Web", "Dart", "Game Logic"],
+    "kind": "game",
+    "color": "#FFBE5C"
+  },
+  {
+    "titleEn": "Wordle",
+    "titleAr": "لعبة Wordle",
+    "descriptionEn": "A custom version of the known Wordle game with additional hint mechanics to guide the player while guessing the target word.",
+    "descriptionAr": "نسخة مطورة من لعبة Wordle المعروفة مع آلية تلميحات إضافية تساعد اللاعب أثناء تخمين الكلمة المستهدفة.",
+    "imageUrls": [
+      "images/projects/wordle-1.png",
+      "images/projects/wordle-2.png",
+      "images/projects/wordle-3.png"
+    ],
+    "link": "/wordle/",
+    "techStack": ["Flutter Web", "Dart", "UI State"],
+    "kind": "game",
+    "color": "#5DCF72"
+  },
+  {
+    "titleEn": "Hxh Inject Detector",
+    "titleAr": "برنامج Hxh inject Detecter",
+    "descriptionEn": "A helper tool for detecting and analyzing suspicious malware-like behavior, with practical indicators to support faster manual review.",
+    "descriptionAr": "أداة مساعدة لكشف وتحليل السلوك المشبوه المرتبط بالمالوير، مع مؤشرات عملية تدعم المراجعة اليدوية بشكل أسرع.",
+    "imageUrls": [
+      "images/projects/hxh-detector-1.png",
+      "images/projects/hxh-detector-2.png",
+      "images/projects/hxh-detector-3.png"
+    ],
+    "link": "/hxh-inject-detector/",
+    "techStack": ["C#", ".NET", "Behavior Analysis", "Windows"],
+    "kind": "tool",
+    "color": "#F5875F"
+  },
+  {
+    "titleEn": "VBS Detector",
+    "titleAr": "برنامج vbs Detecter",
+    "descriptionEn": "A utility for detecting, analyzing, and removing script-worm behavior from infected environments with focused remediation flow.",
+    "descriptionAr": "برنامج لفحص وتحليل وحذف سلوك الديدان البرمجية المبنية على السكربتات، مع مسار معالجة واضح ومباشر.",
+    "imageUrls": [
+      "images/projects/vbs-detector-1.png",
+      "images/projects/vbs-detector-2.png",
+      "images/projects/vbs-detector-3.png"
+    ],
+    "link": "/vbs-detector/",
+    "techStack": ["VBScript", "PowerShell", "Windows", "Threat Cleanup"],
+    "kind": "tool",
+    "color": "#C8A2FF"
+  },
+  {
+    "titleEn": "0x0000PDF",
+    "titleAr": "برنامج 0x0000PDF",
+    "descriptionEn": "An Android app for handling PDF files, including protection, merge, and stamping workflows in one practical interface.",
+    "descriptionAr": "تطبيق أندرويد للتعامل مع ملفات PDF يشمل الحماية والدمج والختم داخل واجهة عملية واحدة.",
+    "imageUrls": [
+      "images/projects/0x0000pdf-1.png",
+      "images/projects/0x0000pdf-2.png",
+      "images/projects/0x0000pdf-3.png"
+    ],
+    "link": "/0x0000pdf/",
+    "techStack": ["Flutter", "Android", "PDF Tools"],
+    "kind": "app",
+    "color": "#8ED1C2"
+  },
+  {
+    "titleEn": "Interactive Bot Development",
+    "titleAr": "برمجة بوت تفاعلي",
+    "descriptionEn": "Designing and building interactive bots for Telegram, WhatsApp, and n8n-based automations to handle support and workflow tasks.",
+    "descriptionAr": "تصميم وبرمجة بوتات تفاعلية لمنصات Telegram و WhatsApp وربطها بأتمتة n8n لتنفيذ مهام الدعم وسير العمل.",
+    "imageUrls": [
+      "images/projects/bots-1.png",
+      "images/projects/bots-2.png",
+      "images/projects/bots-3.png"
+    ],
+    "link": "/bots/",
+    "techStack": ["Telegram Bot API", "WhatsApp", "n8n", "Automation"],
+    "kind": "automation",
+    "color": "#FF9EA8"
+  }
+]

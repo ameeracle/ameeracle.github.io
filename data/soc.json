@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Website",
+    "url": "/",
+    "icon": "language"
+  },
+  {
+    "label": "GitHub",
+    "url": "https://github.com/ameeracle",
+    "icon": "github"
+  },
+  {
+    "label": "LogicLock",
+    "url": "/logiclock/",
+    "icon": "game"
+  },
+  {
+    "label": "Instagram",
+    "url": "https://instagram.com/ameeracle",
+    "icon": "instagram"
+  }
+]
