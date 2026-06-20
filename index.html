@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ameeracle | معرض المشاريع</title>
+  <!-- خط بكسل يدعم العربية والإنجليزية ومناسب لهوية ماريو -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --mario-sky: #5c94fc;
+      --mario-brick: #b84418;
+      --mario-ground: #d8a038;
+      --mario-white: #ffffff;
+      --mario-black: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      image-rendering: pixelated; /* لجعل حواف الصور حادة بنمط البكسل */
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 16px;
+      background-color: var(--mario-sky);
+      color: var(--mario-white);
+      font-family: 'Silkscreen', 'Tahoma', sans-serif;
+      text-align: center;
+    }
+
+    /* تأثير خلفية مربعات خفيفة جداً مثل شبكة الألعاب القديمة */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.15;
+      background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', sans-serif;
+      font-size: clamp(20px, 4vw, 36px);
+      margin-bottom: 10px;
+      color: #f8b800;
+      text-shadow: 4px 4px 0px var(--mario-black);
+    }
+
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 0px var(--mario-black);
+    }
+
+    /* شبكة عرض المشاريع الثلاثة */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    /* بطاقة المشروع بنمط البكسل والحدود السميكة المزدوجة */
+    .card {
+      background: #181818;
+      border: 4px solid var(--mario-black);
+      padding: 16px;
+      box-shadow: 0 8px 0px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin: 0 0 14px 0;
+      color: #ffe9a6;
+      text-shadow: 2px 2px 0px var(--mario-black);
+    }
+
+    /* إطار الصورة بنمط شاشات الألعاب القديمة */
+    .screen-wrapper {
+      border: 4px solid #404040;
+      background: var(--mario-black);
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .screen-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* زر ماريو الكلاسيكي (Pixel Button) */
+    .btn {
+      display: inline-block;
+      background-color: var(--mario-brick);
+      color: var(--mario-white);
+      border: 4px solid var(--mario-black);
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: inset -4px -4px 0px #802000, inset 4px 4px 0px #ff6633;
+      text-shadow: 2px 2px 0px var(--mario-black);
+    }
+
+    .btn:active {
+      box-shadow: inset 4px 4px 0px #802000;
+      transform: translateY(2px);
+    }
+
+    /* أرضية ماريو العشبية أسفل الصفحة لجمالية الهوية */
+    .mario-floor {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(90deg, #50b800 50%, #409800 50%);
+      background-size: 20px 100%;
+      border-top: 4px solid var(--mario-black);
+      z-index: 10;
+    }
+
+    /* التجاوب مع الهواتف لشاشات أصغر */
+    @media (max-width: 820px) {
+      .grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>AMEERACLE</h1>
+      <p class="subtitle">اختر اللعبة أو التطبيق لبدء المغامرة وميض بكسل!</p>
+    </header>
+
+    <main class="grid">
+      <!-- المشروع الأول: ZaWordle -->
+      <article class="card">
+        <div>
+          <h2>ZaWordle</h2>
+          <div class="screen-wrapper">
+            <!-- ضع لقطة الشاشة في مجلد assets بهذا الاسم -->
+            <img src="assets/shot-wordle.png" alt="ZaWordle Screenshot">
+          </div>
+        </div>
+        <a href="./ZaWordle/" class="btn">START GAME</a>
+      </article>
+
+      <!-- المشروع الثاني: LogicLock -->
+      <article class="card">
+        <div>
+          <h2>LogicLock</h2>
+          <div class="screen-wrapper">
+            <!-- ضع لقطة الشاشة في مجلد assets بهذا الاسم -->
+            <img src="assets/shot-logiclock.png" alt="LogicLock Screenshot">
+          </div>
+        </div>
+        <a href="./logiclock/" class="btn">START GAME</a>
+      </article>
+
+      <!-- المشروع الثالث: Azan Plus -->
+      <article class="card">
+        <div>
+          <h2>Azan Plus</h2>
+          <div class="screen-wrapper">
+            <!-- ضع لقطة الشاشة في مجلد assets بهذا الاسم -->
+            <img src="assets/shot-azanplus.png" alt="Azan Plus Screenshot">
+          </div>
+        </div>
+        <a href="./azanplus/" class="btn">OPEN APP</a>
+      </article>
+    </main>
+  </div>
+
+  <!-- شريط الأرضية الكلاسيكي أسفل شاشة اللعبة -->
+  <div class="mario-floor" aria-hidden="true"></div>
+
+</body>
+</html>
