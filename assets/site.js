@@ -1,34 +1,7 @@
-(() => {
-  const doc = document;
-  const year = doc.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
-
-  let modulePromise = null;
-  let busy = false;
-  async function openWorld() {
-    if (busy) return;
-    busy = true;
-    const buttons = [...doc.querySelectorAll('[data-open-world]')];
-    buttons.forEach(b => { b.disabled = true; b.dataset.label = b.innerHTML; b.textContent = 'LOADING…'; });
-    try {
-      modulePromise ||= import('./oz-world.js');
-      const world = await modulePromise;
-      await world.launchWorld(doc.getElementById('oz-world'));
-    } catch (err) {
-      console.error('[OZ WORLD]', err);
-      const root = doc.getElementById('oz-world');
-      const panel = doc.getElementById('world-error');
-      if (root && panel) { root.classList.add('open'); root.setAttribute('aria-hidden','false'); panel.hidden = false; doc.body.classList.add('world-open'); }
-    } finally {
-      buttons.forEach(b => { b.disabled = false; if (b.dataset.label) b.innerHTML = b.dataset.label; });
-      busy = false;
-    }
-  }
-  doc.querySelectorAll('[data-open-world]').forEach(b => b.addEventListener('click', openWorld));
-  doc.getElementById('world-error-exit')?.addEventListener('click', () => {
-    doc.getElementById('oz-world')?.classList.remove('open');
-    doc.getElementById('world-error').hidden = true;
-    doc.body.classList.remove('world-open');
-  });
-  if (new URLSearchParams(location.search).get('world') === '1') openWorld();
+(function(){
+  const doc=document,navToggle=doc.querySelector('.nav-toggle'),nav=doc.querySelector('.nav');
+  if(navToggle&&nav){navToggle.addEventListener('click',()=>{const o=nav.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(o));});nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');navToggle.setAttribute('aria-expanded','false');}});}
+  const reveals=[...doc.querySelectorAll('.reveal')];if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.1});reveals.forEach(x=>io.observe(x));}else reveals.forEach(x=>x.classList.add('on'));
+  doc.querySelectorAll('[data-open-world]').forEach(b=>b.addEventListener('click',()=>window.OZWorld?.open()));
+  if(new URLSearchParams(location.search).get('world')==='1')window.OZWorld?.open();
 })();

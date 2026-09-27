@@ -8,80 +8,123 @@
   <title>AMEER.DEV — Apps & OutZoo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600;700&family=Noto+Kufi+Arabic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Noto+Kufi+Arabic:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="shell topbar-row">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><b>AMEER.DEV</b></a>
-      <nav class="nav" aria-label="التنقل الرئيسي">
+  <a class="skip-link" href="#apps">تجاوز إلى التطبيقات</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-row">
+      <a class="brand" href="#top" aria-label="AMEER.DEV home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy"><b>AMEER.DEV</b><small>OUTSIDE THE BOX</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+      <nav class="nav" id="site-nav" aria-label="التنقل الرئيسي">
         <a href="#apps">التطبيقات</a>
-        <a href="https://blog.ameer.dev/">المدونة</a>
+        <a href="https://blog.ameer.dev/">OutZoo Blog</a>
         <a href="https://github.com/ameeracle" target="_blank" rel="noopener">GitHub</a>
       </nav>
-      <button class="mode-btn" type="button" data-open-world><span class="mode-dot"></span>3D MODE</button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero shell">
-      <p class="eyebrow">OZ // APPS OUTSIDE THE BOX</p>
-      <h1>تطبيقات وتجارب،<br><span>بدون واجهة مزدحمة.</span></h1>
-      <p class="lead">هذه الصفحة هي البوابة البسيطة لتطبيقاتي. افتح ما تريد مباشرة، أو انتقل إلى OutZoo للقراءة والمشاريع، أو فعّل وضع 3D إذا أردت التصفح كلعبة.</p>
-      <div class="actions">
-        <a class="btn primary" href="#apps">التطبيقات</a>
-        <a class="btn" href="https://blog.ameer.dev/">OutZoo Blog</a>
-        <button class="btn dark" type="button" data-open-world>ENTER 3D WORLD</button>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <div class="issue"><b>OZ</b><span>PLAYER SELECT / 2026</span></div>
+          <p class="eyebrow">AMEER.DEV // APPS + EXPERIMENTS</p>
+          <h1>BUILD.<br><span>PLAY.</span><br>EXPLORE.</h1>
+          <p class="hero-lead">تطبيقاتي وتجارب الويب في مكان واحد، مع بوابة مباشرة إلى مدونة <b>OutZoo</b>.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#apps">استعرض التطبيقات</a>
+            <a class="btn" href="https://blog.ameer.dev/">افتح المدونة</a>
+            <button class="btn btn-dark" type="button" data-open-world><span>ENTER 3D MODE</span><kbd>3D</kbd></button>
+          </div>
+        </div>
+
+        <div class="console reveal" aria-label="OZ handheld console illustration">
+          <div class="screen-bezel">
+            <div class="screen">
+              <span class="screen-label">OZ PORTAL</span>
+              <strong>SELECT<br>YOUR<br>WORLD</strong>
+              <div class="screen-menu"><i></i><span>APPS</span><i></i><span>BLOG</span><i class="active"></i><span>3D WORLD</span></div>
+            </div>
+          </div>
+          <div class="console-controls" aria-hidden="true"><span class="dpad"></span><span class="ab">A&nbsp;&nbsp;B</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="apps shell" id="apps">
-      <div class="section-title"><div><p class="eyebrow">AVAILABLE NOW</p><h2>التطبيقات</h2></div><span>04 APPS</span></div>
-      <div class="app-grid">
-        <a class="app" href="ZaWordle/">
-          <img src="assets/zawrd.jpg" alt="ZaWordle" loading="lazy">
-          <div class="app-copy"><small>GAME</small><h3>ZaWordle</h3><p>لعبة كلمات سريعة للويب والهاتف.</p><b>OPEN →</b></div>
-        </a>
-        <a class="app" href="logiclock/">
-          <img src="assets/logiclock.webp" alt="LogicLock" loading="lazy">
-          <div class="app-copy"><small>PUZZLE</small><h3>LogicLock</h3><p>ألغاز منطقية وقفل رقمي وتقدّم محلي.</p><b>OPEN →</b></div>
-        </a>
-        <a class="app" href="azanplus/">
-          <img src="assets/screen-home.jpg" alt="Azan Plus" loading="lazy">
-          <div class="app-copy"><small>UTILITY</small><h3>Azan Plus</h3><p>تجربة تطبيق عملية بواجهة هاتف واضحة.</p><b>OPEN →</b></div>
-        </a>
-        <a class="app app-hxh" href="hxh/">
-          <div class="hxh-art"><span>念</span><b>HUNTER × HUNTER</b></div>
-          <div class="app-copy"><small>QUIZ</small><h3>Aura HxH</h3><p>اختبار Nen تفاعلي لعالم Hunter × Hunter.</p><b>OPEN →</b></div>
-        </a>
-      </div>
-    </section>
+    <section class="apps-section" id="apps">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div><p class="kicker">APP CARTRIDGES</p><h2>اختر التطبيق</h2></div>
+        </div>
 
-    <section class="blog-link shell">
-      <div><p class="eyebrow">OUTZOO JOURNAL</p><h2>المقالات والمشاريع تعيش في OutZoo.</h2><p>نفس الهوية، لكن للقراءة والتجارب والأفكار التقنية.</p></div>
-      <a class="btn primary" href="https://blog.ameer.dev/">OPEN BLOG →</a>
+        <div class="app-grid">
+          <article class="app-card reveal">
+            <div class="cart-notch" aria-hidden="true"></div>
+            <a class="card-screen" href="ZaWordle/" aria-label="فتح ZaWordle"><img src="assets/zawrd.jpg" alt="واجهة ZaWordle" loading="lazy"></a>
+            <div class="card-body"><div class="card-meta"><span>GAME</span><small>01</small></div><h3>ZaWordle</h3><p>لعبة كلمات سريعة للويب والهواتف.</p><a class="card-link" href="ZaWordle/">START GAME ←</a></div>
+            <div class="cart-pins" aria-hidden="true"></div>
+          </article>
+
+          <article class="app-card reveal">
+            <div class="cart-notch" aria-hidden="true"></div>
+            <a class="card-screen" href="logiclock/" aria-label="فتح LogicLock"><img src="assets/logiclock.webp" alt="واجهة LogicLock" loading="lazy"></a>
+            <div class="card-body"><div class="card-meta"><span>PUZZLE</span><small>02</small></div><h3>LogicLock</h3><p>ألغاز منطقية بقفل رقمي وتقدّم محلي.</p><a class="card-link" href="logiclock/">UNLOCK ←</a></div>
+            <div class="cart-pins" aria-hidden="true"></div>
+          </article>
+
+          <article class="app-card reveal">
+            <div class="cart-notch" aria-hidden="true"></div>
+            <a class="card-screen" href="azanplus/" aria-label="فتح Azan Plus"><img src="assets/screen-home.jpg" alt="واجهة Azan Plus" loading="lazy"></a>
+            <div class="card-body"><div class="card-meta"><span>UTILITY</span><small>03</small></div><h3>Azan Plus</h3><p>تطبيق عملي بواجهة هاتف مباشرة وواضحة.</p><a class="card-link" href="azanplus/">OPEN APP ←</a></div>
+            <div class="cart-pins" aria-hidden="true"></div>
+          </article>
+
+          <article class="app-card reveal">
+            <div class="cart-notch" aria-hidden="true"></div>
+            <a class="card-screen hxh-screen" href="hxh/" aria-label="فتح Aura HxH"><span>念</span><b>HUNTER × HUNTER</b></a>
+            <div class="card-body"><div class="card-meta"><span>QUIZ</span><small>04</small></div><h3>Aura HxH</h3><p>اختبار تفاعلي لعالم Hunter × Hunter والـNen.</p><a class="card-link" href="hxh/">START TEST ←</a></div>
+            <div class="cart-pins" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="shell"><span>AMEER.DEV</span><span>© <b id="year"></b> // OZ SYSTEM</span></div></footer>
+  <footer class="footer"><div class="shell footer-row"><span>AMEER.DEV // OZ</span><a href="https://blog.ameer.dev/">OUTZOO BLOG →</a></div></footer>
 
   <div class="world" id="oz-world" aria-hidden="true">
-    <canvas id="world-canvas" aria-label="OZ World 3D"></canvas>
-    <div class="world-hud">
-      <div class="world-bar"><div><b>OZ WORLD</b><span>FIRST PERSON NAVIGATION</span></div><button id="world-exit" type="button">EXIT 3D</button></div>
-      <div class="crosshair" aria-hidden="true"></div>
-      <div class="world-prompt" id="world-prompt"><small>READY</small><strong>تحرك نحو إحدى المحطات</strong><span>WASD · MOUSE · E TO OPEN</span></div>
-      <div class="world-help"><span>WASD MOVE</span><span>MOUSE LOOK</span><span>E OPEN</span></div>
-      <div class="touch-ui" id="touch-ui" aria-hidden="true">
-        <div class="touch-pad" id="touch-pad"><button data-move="KeyW">▲</button><button data-move="KeyA">◀</button><button data-move="KeyS">▼</button><button data-move="KeyD">▶</button></div>
-        <div class="touch-look" id="touch-look">DRAG TO LOOK</div>
-        <button class="touch-open" id="touch-open" type="button">OPEN</button>
+    <div class="world-viewport" id="world-viewport">
+      <div class="world-sky"></div>
+      <div class="world-scene" id="world-scene">
+        <div class="world-floor"></div>
+        <div class="world-sign" style="--x:0px;--y:-250px;--z:-1450px"><b>OZ WORLD</b><small>SELECT A STATION</small></div>
+        <button class="world-station" data-world-href="ZaWordle/" data-x="-520" data-z="-650" style="--x:-520px;--y:-130px;--z:-650px"><small>01 / GAME</small><b>ZaWordle</b><span>OPEN</span></button>
+        <button class="world-station" data-world-href="logiclock/" data-x="0" data-z="-850" style="--x:0px;--y:-130px;--z:-850px"><small>02 / PUZZLE</small><b>LogicLock</b><span>OPEN</span></button>
+        <button class="world-station" data-world-href="azanplus/" data-x="520" data-z="-650" style="--x:520px;--y:-130px;--z:-650px"><small>03 / APP</small><b>Azan Plus</b><span>OPEN</span></button>
+        <button class="world-station" data-world-href="hxh/" data-x="-420" data-z="-1320" style="--x:-420px;--y:-130px;--z:-1320px"><small>04 / QUIZ</small><b>Aura HxH</b><span>OPEN</span></button>
+        <button class="world-station world-blog" data-world-href="https://blog.ameer.dev/" data-x="420" data-z="-1320" style="--x:420px;--y:-130px;--z:-1320px"><small>PORTAL</small><b>OUTZOO</b><span>ENTER BLOG</span></button>
       </div>
     </div>
-    <div class="world-error" id="world-error" hidden><b>3D MODE UNAVAILABLE</b><p>تعذر إنشاء WebGL على هذا الجهاز.</p><button type="button" id="world-error-exit">BACK TO SITE</button></div>
+    <div class="world-shade" aria-hidden="true"></div>
+    <div class="world-hud">
+      <div class="world-topbar"><div><b>OZ WORLD</b><span>3D NAVIGATION</span></div><button type="button" id="world-exit">EXIT 3D</button></div>
+      <div class="world-crosshair" aria-hidden="true"><i></i><i></i></div>
+      <div class="world-prompt" id="world-prompt"><small>READY</small><strong>WASD للحركة · حرّك الماوس للنظر</strong><span>اقترب من محطة واضغط E</span></div>
+      <div class="touch-pad" id="touch-pad" aria-label="Touch controls">
+        <button type="button" data-move="KeyW">▲</button><button type="button" data-move="KeyA">◀</button><button type="button" data-move="KeyS">▼</button><button type="button" data-move="KeyD">▶</button>
+      </div>
+      <div class="touch-look" id="touch-look">DRAG TO LOOK</div>
+      <button class="touch-open" id="touch-open" type="button">OPEN</button>
+    </div>
   </div>
 
+  <script src="assets/oz-world.js" defer></script>
   <script src="assets/site.js" defer></script>
 </body>
 </html>
